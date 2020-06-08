@@ -233,6 +233,6 @@ def winning_team
         home_points.push(player[:points])
       end
     end
-    
+
   end
 end
