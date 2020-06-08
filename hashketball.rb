@@ -241,3 +241,15 @@ def winning_team
   end
   home_points.reduce(:+) > away_points.reduce(:+) ? home_points.reduce(:+) : away_points.reduce(:+)
 end
+
+def player_with_longest_name
+  player_name = 0
+  game_hash.each do |team, team_data|
+    team_data[:players].each do |player|
+      if player[:player_name] == player_name
+        shoe_size = player[:shoe]
+      end
+    end
+  end
+  player_name
+end
