@@ -225,13 +225,19 @@ end
 
 def winning_team
   home_points = []
-  away_points
+  away_points = []
   game_hash.each do |team, team_data|
     if team == :home
       team_data[:players].each do |player|
         home_points.push(player[:points])
       end
     end
-
+    
+    if team == :away
+      team_data[:players].each do |player|
+        away_points.push(player[:points])
+      end
+    end
   end
+  home_points.reduce(:+) > away_points.reduce(:+) ? home_points.reduce(:+) : away_points.reduce(:+)
 end
