@@ -228,7 +228,6 @@ def winning_team
   away_points
   game_hash.each do |team, team_data|
     if team == :home
-      binding.pry
       team_data[:players].each do |player|
         home_points.push(player[:points])
       end
