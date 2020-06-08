@@ -232,7 +232,7 @@ def winning_team
         home_points.push(player[:points])
       end
     end
-    
+
     if team == :away
       team_data[:players].each do |player|
         away_points.push(player[:points])
