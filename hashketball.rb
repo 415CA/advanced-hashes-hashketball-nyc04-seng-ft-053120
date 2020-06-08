@@ -270,5 +270,5 @@ def long_name_steals_a_ton?
       end
     end
   end
-  longest_player_name
+  longest_player_steals > max_steals ? true : false
 end
