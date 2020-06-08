@@ -264,7 +264,7 @@ def long_name_steals_a_ton?
         longest_player_name = player[:player_name]
         longest_player_steals = player[:steals]
       end
-      
+
       if max_steals < player[:steals]
         max_steals = player[:steals]
       end
